@@ -1,0 +1,130 @@
+/* src/pages/Especialidades.css */
+
+.especialidades-page {
+  padding-top: 80px;
+}
+
+.hero-especialidades {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--white);
+}
+
+.hero-especialidades h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.hero-especialidades p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  color: var(--white);
+}
+
+.especialidades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.especialidad-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border-top: 4px solid var(--color-principal);
+}
+
+.especialidad-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.especialidad-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.especialidad-card h3 {
+  color: var(--dark);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.descripcion {
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.servicios-list {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--light);
+  border-radius: 8px;
+}
+
+.servicios-list h4 {
+  color: var(--primary);
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+}
+
+.servicios-list ul {
+  list-style: none;
+}
+
+.servicios-list ul li {
+  color: var(--dark);
+  font-size: 0.9rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.servicios-list ul li:last-child {
+  border-bottom: none;
+}
+
+.servicios-list ul li::before {
+  content: "✓";
+  color: var(--secondary);
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.btn-agendar {
+  display: inline-block;
+  width: 100%;
+  padding: 0.9rem;
+  text-align: center;
+  border: 2px solid;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-agendar:hover {
+  background: var(--color-principal);
+  color: var(--white) !important;
+}
+
+@media (max-width: 768px) {
+  .hero-especialidades h1 {
+    font-size: 2rem;
+  }
+
+  .especialidades-grid {
+    grid-template-columns: 1fr;
+  }
+}

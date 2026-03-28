@@ -1,0 +1,213 @@
+/* src/pages/Doctores.css */
+
+.doctores-page {
+  padding-top: 80px;
+}
+
+.hero-doctores {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--white);
+}
+
+.hero-doctores h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.hero-doctores p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  color: var(--white);
+}
+
+.filtro-section {
+  background: var(--white);
+  padding: 2rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.filtro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filtro-label {
+  font-weight: 600;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filtro-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.filtro-btn {
+  padding: 0.6rem 1.2rem;
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filtro-btn:hover,
+.filtro-btn.activo {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.doctores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.doctor-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-10px);
+}
+
+.doctor-image-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.doctor-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.disponible-badge,
+.no-disponible-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.disponible-badge {
+  background: #4caf50;
+  color: white;
+}
+
+.no-disponible-badge {
+  background: #f44336;
+  color: white;
+}
+
+.doctor-info {
+  padding: 1.5rem;
+}
+
+.doctor-info h3 {
+  color: var(--primary);
+  margin-bottom: 0.3rem;
+  font-size: 1.3rem;
+}
+
+.especialidad {
+  color: var(--secondary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.doctor-details {
+  margin-bottom: 1rem;
+}
+
+.doctor-details p {
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.star-icon {
+  color: #ffc107;
+}
+
+.doctor-contact {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.contact-btn {
+  flex: 1;
+  padding: 0.7rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.contact-btn:first-child {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+}
+
+.contact-btn:first-child:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.contact-btn.primary {
+  background: var(--primary);
+  color: var(--white);
+  border: 2px solid var(--primary);
+}
+
+.contact-btn.primary:hover {
+  background: var(--secondary);
+  border-color: var(--secondary);
+}
+
+@media (max-width: 768px) {
+  .hero-doctores h1 {
+    font-size: 2rem;
+  }
+
+  .filtro-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .filtro-btn {
+    width: 100%;
+  }
+}

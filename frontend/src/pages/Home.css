@@ -1,0 +1,303 @@
+/* src/pages/Home.css */
+/* =========================================
+   CLÍNICA VIDA - HOME PAGE STYLES
+   ========================================= */
+
+.home-page {
+  padding-top: 80px; /* Espacio para el navbar fijo */
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  background:
+    linear-gradient(135deg, var(--primary), var(--secondary)),
+    url("https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1953&q=80");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  padding: 0 2rem;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 26, 46, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  color: var(--white);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Botón Hero - "Comienza tu cuidado hoy" */
+.btn-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: var(--white);
+  color: var(--primary);
+  padding: 1.2rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.btn-hero:hover {
+  background: var(--secondary);
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 196, 204, 0.4);
+}
+
+.btn-hero svg {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-hero:hover svg {
+  transform: translateX(5px);
+}
+
+/* =========================================
+   SECCIÓN DE SERVICIOS
+   ========================================= */
+.section {
+  padding: 5rem 2rem;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.section-title p {
+  color: var(--gray);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Tarjetas de Servicios */
+.card {
+  background: var(--white);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+  text-align: center;
+}
+
+.card:hover {
+  border-color: transparent;
+}
+
+.card-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover .card-icon {
+  transform: scale(1.1);
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  color: var(--dark);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.card p {
+  color: var(--gray);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: gap 0.3s ease;
+}
+
+.card-link:hover {
+  gap: 0.8rem;
+}
+
+.card-link svg {
+  font-size: 0.9rem;
+}
+
+/* CTA de sección */
+.section-cta {
+  text-align: center;
+  padding: 2rem;
+  background: var(--light);
+  border-radius: var(--radius);
+  margin-top: 2rem;
+}
+
+.section-cta p {
+  color: var(--dark);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* =========================================
+   STATS SECTION
+   ========================================= */
+.stats-section {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  padding: 4rem 2rem;
+  color: var(--white);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+.stat-card h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+}
+
+.stat-card p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  color: var(--white);
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 500px;
+    padding: 0 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn-hero {
+    padding: 1rem 1.8rem;
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .stat-card h3 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
